@@ -84,11 +84,6 @@ O segundo desafio se concentra na criação de uma imagem Docker extremamente le
 
 Conseguimos alcançar uma imagem final com o tamanho impressionante de **1.23MB**, bem abaixo do limite de 2MB estabelecido como meta para este desafio. Este resultado demonstra a eficácia das estratégias de otimização de imagem adotadas.
 
-
-Entendi, você deseja organizar o README para deixar claro que existem duas opções para executar a aplicação: através da construção e execução local da imagem Docker a partir do código fonte clonado, ou baixando e executando a imagem diretamente do Docker Hub. Vamos reorganizar as instruções para refletir claramente essas duas opções:
-
----
-
 ### Como Executar:
 
 Você tem duas opções para executar a aplicação e visualizar a mensagem "Full Cycle Rocks!!". Essas instruções assumem que você tem o Docker instalado e configurado em sua máquina.
@@ -113,9 +108,6 @@ Você tem duas opções para executar a aplicação e visualizar a mensagem "Ful
 
     Este comando inicia um container baseado na imagem que você acabou de construir, e a mensagem "Full Cycle Rocks!!" deverá ser exibida no terminal. A flag `--rm` assegura que o container seja automaticamente removido após a execução.
 
-Incorporando as informações que você forneceu, o trecho atualizado para a Opção 2 do README ficaria assim:
-
----
 
 #### Opção 2: Baixando e Executando a Imagem Diretamente do Docker Hub
 
