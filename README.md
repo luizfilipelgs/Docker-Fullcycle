@@ -62,19 +62,87 @@ docker-compose up -d
 A cada reinicialização, um novo nome é adicionado ao banco de dados, e a lista na página web refletirá essa atualização.
 
 
+Aqui está um complemento revisado para o trecho do README do Desafio 2, incluindo todas as suas solicitações:
+
+---
+
 ## Desafio 2: Imagem Docker Leve com Go
 
-O segundo desafio foca na criação de uma imagem Docker extremamente leve para uma aplicação desenvolvida em Go. O objetivo é construir uma imagem que, ao ser executada, exiba a mensagem "Full Cycle Rocks!!", demonstrando a capacidade de otimização e eficiência na construção de imagens Docker. Este desafio ilustra:
+O segundo desafio se concentra na criação de uma imagem Docker extremamente leve para uma aplicação desenvolvida em Go. O principal objetivo é desenvolver uma imagem cuja execução resulte na exibição da mensagem "Full Cycle Rocks!!". Este desafio destaca a importância e a capacidade de otimização e eficiência na construção de imagens Docker, especialmente para aplicações desenvolvidas em linguagens compiladas como Go.
 
-- Desenvolvimento de aplicações simples em Go.
-- Construção de imagens Docker leves e otimizadas.
-- Publicação de imagens no Docker Hub.
+**Principais Aprendizados:**
 
-## Tecnologias e Conceitos Aplicados
+- Desenvolvimento de Aplicações Simples em Go
 
-- **Docker e Docker Compose:** Ferramentas essenciais para criar, executar e orquestrar contêineres, facilitando a replicação de ambientes e a integração contínua.
-- **Nginx:** Utilizado como proxy reverso, demonstrando práticas de configuração para otimizar o desempenho e a segurança das aplicações.
-- **Node.js e MySQL:** Combinação de tecnologias para desenvolvimento de aplicações web dinâmicas, abordando conceitos de CRUD e interações com banco de dados.
-- **Go (Golang):** Foco na eficiência e simplicidade para desenvolvimento de software, além de práticas para minimizar o tamanho das imagens Docker.
+- Construção de Imagens Docker Leves e Otimizadas
 
-Este projeto visa não apenas cumprir com os requisitos técnicos dos desafios propostos, mas também demonstrar boas práticas de desenvolvimento e operações, enfatizando a importância da eficiência, escalabilidade e facilidade de manutenção em ambientes Dockerizados.
+- Utilização de Multi-Staging Builds
+
+- Publicação de Imagens no Docker Hub
+
+### Resultados:
+
+Conseguimos alcançar uma imagem final com o tamanho impressionante de **1.23MB**, bem abaixo do limite de 2MB estabelecido como meta para este desafio. Este resultado demonstra a eficácia das estratégias de otimização de imagem adotadas.
+
+
+Entendi, você deseja organizar o README para deixar claro que existem duas opções para executar a aplicação: através da construção e execução local da imagem Docker a partir do código fonte clonado, ou baixando e executando a imagem diretamente do Docker Hub. Vamos reorganizar as instruções para refletir claramente essas duas opções:
+
+---
+
+### Como Executar:
+
+Você tem duas opções para executar a aplicação e visualizar a mensagem "Full Cycle Rocks!!". Essas instruções assumem que você tem o Docker instalado e configurado em sua máquina.
+
+#### Opção 1: Construindo e Executando a Imagem Docker Localmente
+
+1. **Clone o Repositório** (se ainda não o fez):
+
+2. **Construa a Imagem Docker**:
+
+    Substitua `nome_da_imagem` pelo nome que deseja dar à sua imagem Docker. Este comando deve ser executado no diretório raiz do projeto, onde o `Dockerfile` está localizado:
+
+    ```bash
+    docker build -t nome_da_imagem .
+    ```
+
+3. **Execute a Imagem**:
+
+    ```bash
+    docker run --rm nome_da_imagem
+    ```
+
+    Este comando inicia um container baseado na imagem que você acabou de construir, e a mensagem "Full Cycle Rocks!!" deverá ser exibida no terminal. A flag `--rm` assegura que o container seja automaticamente removido após a execução.
+
+Incorporando as informações que você forneceu, o trecho atualizado para a Opção 2 do README ficaria assim:
+
+---
+
+#### Opção 2: Baixando e Executando a Imagem Diretamente do Docker Hub
+
+Se você preferir baixar e executar a imagem diretamente do Docker Hub sem construí-la localmente:
+
+1. **Baixe a Imagem do Docker Hub**:
+
+    Você pode baixar a imagem diretamente usando o seguinte comando. 
+
+    Para a última versão, você pode simplesmente executar:
+
+    ```bash
+    docker pull luizfilipelgs/golang-fullcycle
+    ```
+
+2. **Execute a Imagem**:
+
+    Após baixar a imagem, execute-a com o seguinte comando para ver a mensagem "Full Cycle Rocks!!":
+
+    ```bash
+    docker run --rm luizfilipelgs/golang-fullcycle
+    ```
+
+    Este comando inicia um container baseado na imagem especificada, e você deverá ver a mensagem exibida no terminal. A flag `--rm` assegura que o container seja automaticamente removido após a execução, mantendo seu sistema limpo.
+
+Para mais informações e versões disponíveis, visite o repositório no Docker Hub:
+
+[luizfilipelgs/golang-fullcycle no Docker Hub](https://hub.docker.com/r/luizfilipelgs/golang-fullcycle)
+
+
