@@ -34,11 +34,12 @@ app.listen(PORT, async () => {
 
 
 app.get('/', async (req, res) => {
-  const [results] = await connection.query(`SELECT * FROM people`);
+  const [results] = await connection.query(`SELECT name FROM people`);
   console.log('results:', results);
+  const namesList = results.map((result) => result.name);
+  console.log('namesList:', namesList);
   res.send(`
     <h1>Full Cycle Rocks!</h1>
+    <ul>${namesList.map((name) => `<li>${name}</li>`).join('')}</ul>
   `);
 })
-
-{/* <ul>${namesList.map((name) => `<li>${name}</li>`).join('')}</ul> */}
