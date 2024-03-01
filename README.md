@@ -11,7 +11,56 @@ O primeiro desafio envolve a configuração de um ambiente Dockerizado onde o Ng
 - Integração com banco de dados MySQL.
 - Uso de Docker Compose para orquestração de múltiplos contêineres.
 
-### OBS: Cada vez que o servidor for iniciado, um novo nome será adiconado ao banco de dados, e a lista que aparece na tela será atualizada
+### Executando o Desafio
+
+Para colocar o ambiente em funcionamento, siga estes passos:
+
+1. Navegue até a pasta do desafio no terminal:
+
+```bash
+cd Desafio\ nginx\ node
+```
+
+2. Execute o seguinte comando para iniciar todos os serviços definidos no arquivo `docker-compose.yml` em modo "detached":
+
+```bash
+docker-compose up -d
+```
+
+Isso iniciará os contêineres do Nginx, Node.js e MySQL em segundo plano. O Nginx está configurado para atuar como um proxy reverso, direcionando as requisições recebidas na porta 8080 para a aplicação Node.js, que por sua vez interage com o banco de dados MySQL.
+
+### Adicionando Novos Nomes ao Banco de Dados
+
+A cada inicialização do servidor Node.js, um novo nome é automaticamente adicionado ao banco de dados MySQL, e a lista de nomes exibida na página web é atualizada.
+
+### Visualizando a Lista de Nomes
+
+Para visualizar a lista de nomes, abra um navegador e acesse:
+
+```
+http://localhost:8080
+```
+
+Você verá uma página web com a mensagem "Full Cycle Rocks!" seguida pela lista atualizada de nomes.
+
+### Reiniciando os Serviços para Atualizar a Lista
+
+Para adicionar mais nomes à lista e visualizar as atualizações, você pode reiniciar o serviço Node.js seguindo estes passos:
+
+1. Pare os serviços em execução:
+
+```bash
+docker-compose down
+```
+
+2. Inicie os serviços novamente em modo "detached":
+
+```bash
+docker-compose up -d
+```
+
+A cada reinicialização, um novo nome é adicionado ao banco de dados, e a lista na página web refletirá essa atualização.
+
 
 ## Desafio 2: Imagem Docker Leve com Go
 
