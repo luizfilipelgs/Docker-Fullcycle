@@ -11,6 +11,8 @@ O primeiro desafio envolve a configuração de um ambiente Dockerizado onde o Ng
 - Integração com banco de dados MySQL.
 - Uso de Docker Compose para orquestração de múltiplos contêineres.
 
+### OBS: Cada vez que o servidor for iniciado, um novo nome será adiconado ao banco de dados, e a lista que aparece na tela será atualizada
+
 ## Desafio 2: Imagem Docker Leve com Go
 
 O segundo desafio foca na criação de uma imagem Docker extremamente leve para uma aplicação desenvolvida em Go. O objetivo é construir uma imagem que, ao ser executada, exiba a mensagem "Full Cycle Rocks!!", demonstrando a capacidade de otimização e eficiência na construção de imagens Docker. Este desafio ilustra:
