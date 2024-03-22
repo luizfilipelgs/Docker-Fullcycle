@@ -57,9 +57,6 @@ docker-compose up -d
 
 A cada reinicialização, um novo nome é adicionado ao banco de dados, e a lista na página web refletirá essa atualização.
 
-
-Aqui está um complemento revisado para o trecho do README do Desafio 2, incluindo todas as suas solicitações:
-
 ---
 
 ## Desafio 2: Imagem Docker Leve com Go
