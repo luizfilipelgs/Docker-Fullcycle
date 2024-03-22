@@ -17,10 +17,6 @@ Para colocar o ambiente em funcionamento, siga estes passos:
 
 1. Navegue até a pasta do desafio no terminal:
 
-```bash
-cd Desafio\ nginx\ node
-```
-
 2. Execute o seguinte comando para iniciar todos os serviços definidos no arquivo `docker-compose.yml` em modo "detached":
 
 ```bash
